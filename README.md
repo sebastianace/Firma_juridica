@@ -34,6 +34,7 @@ Un cliente puede tener varios asuntos legales, pero cada asunto pertenece a un �
 Un procurador puede encargarse de varios asuntos y un mismo asunto puede ser llevado por varios procuradores
 ## Modelo conceptual (Diagrama ER)
 <img width="1251" height="739" alt="Gemini_Generated_Image_wcmzb8wcmzb8wcmz (1)" src="https://github.com/user-attachments/assets/550073ac-c8f1-43b1-b6d4-0401b661d26d" />
+
 ## Transformación al modelo relacional
 
 1. **Cada entidad → una tabla.**  
@@ -46,6 +47,7 @@ Un procurador puede encargarse de varios asuntos y un mismo asunto puede ser lle
    Se crea la tabla `ASUNTO_PROCURADOR` con clave primaria compuesta por `num_expediente` (FK → `ASUNTO`) y `DNI_procurador` (FK → `PROCURADOR`). Esto evita duplicados y permite en el futuro añadir atributos propios de la relación, como una fecha de asignación.
 ## Modelo lógico relacional
 <img width="910" height="698" alt="TABLA" src="https://github.com/user-attachments/assets/9508eb53-0302-407c-9846-3e64c90174db" />
+
 ## Decisiones tomadas
 
 **¿Por qué una tabla intermedia?**  
